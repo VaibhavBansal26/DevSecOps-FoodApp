@@ -5,11 +5,30 @@ System Architecture
 
 ![App](https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741897056/diagram-export-13-03-2025-16_15_50_nrr0sx.png)
 
+
 App: http://35.173.218.166:3000/
 
 Jenkins: http://35.173.218.166:8080/
 
 SonarQube: http://35.173.218.166:9000/
+
+
+# Flow
+
+# Jenkins
+
+![jenkins](https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741897012/Screenshot_2025-03-13_at_3.52.24_PM_ejwjun.png)
+
+# SonarQube
+
+![sonarqube](https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741897013/Screenshot_2025-03-13_at_3.59.07_PM_tgfg9h.png)
+
+# App
+
+![app](https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741897011/Screenshot_2025-03-13_at_3.52.36_PM_b1lp4q.png)
+
+
+
 
 Creation of IAM User
 Terraform SCript -> aws configure
