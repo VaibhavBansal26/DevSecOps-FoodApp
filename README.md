@@ -5,6 +5,7 @@ System Architecture
 
 ![App](https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741897056/diagram-export-13-03-2025-16_15_50_nrr0sx.png)
 
+**App is down as of now becuase running EC2 instance is expensive!**
 
 App: http://35.173.218.166:3000/
 
