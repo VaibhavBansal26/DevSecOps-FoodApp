@@ -1,7 +1,14 @@
 # DevSecOps-FoodApp
 Deploying Food Delivery App - Terraform, Jenkins, SonarQube, Trivy, Docker, Prometheus, Grafana, Helm, React Js
 
+System Architecture
+
+![App](https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741897056/diagram-export-13-03-2025-16_15_50_nrr0sx.png)
+
+App: http://35.173.218.166:3000/
+
 Jenkins: http://35.173.218.166:8080/
+
 SonarQube: http://35.173.218.166:9000/
 
 Creation of IAM User
@@ -38,6 +45,7 @@ sudo systemctl status jenkins
 ```
 
 Configure Jenkins Installations (Plugins)
+
 Configure Jeninkins Tools
 1. jdk17
 2. SonarQubeScanner
@@ -47,13 +55,21 @@ Configure Jeninkins Tools
 6. Docker
    
 Configure Sonarqube - 
+
 Create Token - Administration -> Security -> Users -> Token -> Generate Token
+
 Configure Tokens in Jenkins Dashboard to connect everything
+
 Add Tokens to Jenkins -> Managae Jenkins -> Credentials
+
 Add Sonar Token,Docker Cred
+
 Create Sonarqube webhook
+
 Configure sonarqube url in jenkins
+
 Configure System - Configure Global Settings
+
 1. Configure sonarqube url (sonarqube server)
 
 
