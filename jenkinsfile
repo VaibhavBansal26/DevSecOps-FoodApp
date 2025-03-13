@@ -15,14 +15,14 @@ pipeline{
         }
         stage('Checkout from Git'){
             steps{
-                git 'https://github.com/KastroVKiran/DevOps-Project-Swiggy.git'
+                git 'https://github.com/VaibhavBansal26/DevSecOps-FoodApp.git'
             }
         }
         stage("Sonarqube Analysis "){
             steps{
                 withSonarQubeEnv('sonar-server') {
-                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=Swiggy \
-                    -Dsonar.projectKey=Swiggy '''
+                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=FoodApp \
+                    -Dsonar.projectKey=FoodApp '''
                 }
             }
         }
@@ -52,22 +52,22 @@ pipeline{
         stage("Docker Build & Push"){
             steps{
                 script{
-                   withDockerRegistry(credentialsId: 'docker-creds', toolName: 'docker'){   
+                   withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker'){   
                        sh "docker build -t swiggy ."
-                       sh "docker tag swiggy kastrov/swiggy:latest "
-                       sh "docker push kastrov/swiggy:latest "
+                       sh "docker tag swiggy vaibhavbansal26/swiggy:latest "
+                       sh "docker push vaibhavbansal26/swiggy:latest "
                     }
                 }
             }
         }
         stage("TRIVY"){
             steps{
-                sh "trivy image kastrov/swiggy:latest > trivy.txt" 
+                sh "trivy image vaibhavbansal26/swiggy:latest > trivy.txt" 
             }
         }
         stage('Deploy to container'){
             steps{
-                sh 'docker run -d --name swiggy -p 3000:3000 kastrov/swiggy:latest'
+                sh 'docker run -d --name swiggy -p 3000:3000 vaibhavbansal26/swiggy:latest'
             }
         }
     }
